@@ -1,0 +1,26 @@
+{
+  "name": "pure-modal",
+  "version": "0.0.1",
+  "description": "A lightweight, accessible, vanilla JavaScript modal component",
+  "main": "modal.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/romamilkovic/pure-modal.git"
+  },
+  "keywords": [
+    "modal",
+    "dialog",
+    "popup",
+    "popin",
+    "window"
+  ],
+  "author": "Roman Slonov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/romamilkovic/pure-modal/issues"
+  },
+  "homepage": "https://github.com/romamilkovic/pure-modal#readme"
+}
