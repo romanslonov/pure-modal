@@ -15,7 +15,7 @@
 
 .modal-dialog {
     max-width: 500px;
-    margin: 1.75rem auto;
+    margin: 64px auto;
     position: relative;
     width: auto;
     pointer-events: none;
@@ -29,8 +29,8 @@
     pointer-events: auto;
     background-color: #fff;
     background-clip: padding-box;
-    border: 1px solid rgba(0,0,0,.2);
-    border-radius: .3rem;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 4px;
     outline: 0;
 }
 
@@ -38,23 +38,21 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 1rem;
-    border-bottom: 1px solid #e9ecef;
-    border-top-left-radius: .3rem;
-    border-top-right-radius: .3rem;
+    padding: 16px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
 }
 
 .modal-body {
     position: relative;
     flex: 1 1 auto;
-    padding: 1rem;
+    padding: 16px;
 }
 
 .modal-footer {
     display: flex;
     justify-content: flex-end;
-    padding: 1rem;
-    border-top: 1px solid #e9ecef;
+    padding: 16px;
 }
 
 .modal-title {

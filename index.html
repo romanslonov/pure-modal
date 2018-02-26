@@ -44,7 +44,7 @@
 
     <main class="content container">
         <div class="container">
-            <h2 class="mt-0 mb-s ta-center fw-4">Features</h2>
+            <h2 class="mt-0 mb-l ta-center fw-4">Features</h2>
             <div class="flex justify-center items-center">
                 <div class="mr-s">
                     <button class="btn btn--l btn--primary" data-toggle="modal" data-target="modal1">Basic modal</button>
@@ -74,7 +74,7 @@
                     </div>
                     <div class="modal-footer">
                         <div class="mr-xs">
-                            <button class="btn" data-dismiss="modal" aria-label="Close">Close</button>
+                            <button class="btn btn--basic" data-dismiss="modal" aria-label="Close">Close</button>
                         </div>
                         <button class="btn btn--primary">Save changes</button>
                     </div>
@@ -100,15 +100,17 @@
         </div>
     </main>
 
-    <footer></footer>
+    <footer class="footer container">
+        <div class="footer__content">
+            Designed and built by <a href="https://github.com/romanslonov" class="link link--primary">Roman Slonov.</a>
+        </div>
+    </footer>
 
 
 <script src="modal.js"></script>
 <script>
 // Modal1
-const modal1 = new Modal(
-  'modal1'
-);
+const modal1 = new Modal('modal1');
 
 // Modal2
 const modal2 = new Modal('modal2', { transition: false });
