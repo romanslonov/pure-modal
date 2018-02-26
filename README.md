@@ -24,9 +24,9 @@ https://romanslonov.github.io/pure-modal/
             </div>
             <div class="modal-footer">
                 <div class="mr-xs">
-                    <button class="btn btn--basic" data-dismiss="modal" aria-label="Close">Close</button>
+                    <button data-dismiss="modal" aria-label="Close">Close</button>
                 </div>
-                <button class="btn btn--primary">Save changes</button>
+                <button>Save changes</button>
             </div>
         </div>
     </div>
