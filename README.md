@@ -49,3 +49,23 @@ modal1.init();
 ```
 
 ### Done! 🎉
+
+## API
+
+### Options
+| Name             |type            | Default        | Description
+| -----------------|----------------|----------------|-------------
+| transition       | Boolean        | true           | Initialize PureModal instance. Add event listeners. 
+| beforeOpen       | Function       | null           | A callback that will be called before opening the modal.
+| onOpen           | Function       | null           | A callback that will be called after the modal is fully opened.
+| beforeClose      | Function       | null           | A callback that will be called before closing the modal.
+| onClose          | Function       | null           | A callback that will be called after the modal is fully closed.
+
+
+### Methods
+| Name             | Description
+| -----------------|---------------
+| `init()`         | Initialize PureModal instance. Add event listeners. 
+| `destroy()`      | Destroy all event listeners. Useful when building SPA.
+| `open()`         | Call to open modal manually. 
+| `close()`        | Call to close modal manually.
