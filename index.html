@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pure Modal – A lightweight, accessible, vanilla JavaScript modal component.</title>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="dist/modal.min.css">
     <link rel="stylesheet" href="index.css">
 </head>
 <body class="page">
@@ -44,7 +44,7 @@
 
     <main class="content container">
         <div class="container">
-            <h2 class="mt-0 mb-l ta-center fw-4">Features</h2>
+            <h2 class="mt-0 mb-l ta-center fw-4">Examples</h2>
             <div class="flex justify-center items-center">
                 <div class="mr-s">
                     <button class="btn btn--l btn--primary" data-toggle="modal" data-target="modal1">Basic modal</button>
@@ -107,13 +107,13 @@
     </footer>
 
 
-<script src="modal.js"></script>
+<script src="dist/modal.min.js"></script>
 <script>
 // Modal1
-const modal1 = new Modal('modal1');
+const modal1 = new PureModal('modal1');
 
 // Modal2
-const modal2 = new Modal('modal2', { transition: false });
+const modal2 = new PureModal('modal2', { transition: false });
 
 modal1.init();
 modal2.init();

@@ -1,4 +1,3 @@
-const moduleName = 'PureModal';
 const ClassName = {
   BACKDROP: 'modal-backdrop',
   OPEN: 'is-open',
@@ -15,15 +14,15 @@ const DefaultConfig = {
   transition: true,
 }
 
-const throwError = message => window.console.error(`${moduleName}: ${message}`);
+const throwError = message => window.console.error(`PureModal: ${message}`);
 const reflow = element => element.offsetHeight;
 
-class Modal {
+class PureModal {
   constructor(id, config) {
     this.id = id;
     this.config = Object.assign({}, DefaultConfig, config);
     
-    this.modal = Modal.findModal(this.id);
+    this.modal = PureModal.findModal(this.id);
     this.dialog = this.modal.querySelector(`.${ClassName.DIALOG}`);
 
     this.backdrop = null;
@@ -31,7 +30,7 @@ class Modal {
     this.isOpen = false;
     this.isInit = false;
 
-    this.triggers = Modal.findTriggers(this.id);
+    this.triggers = PureModal.findTriggers(this.id);
     this.closeEls = null;
     
     this.focusableEls = null;
@@ -246,4 +245,10 @@ class Modal {
   static findModal(id) {
     return document.getElementById(id);
   }
+}
+    
+if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+  module.exports = PureModal;
+} else {
+  window.PureModal = PureModal;
 }

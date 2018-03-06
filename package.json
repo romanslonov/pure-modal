@@ -2,7 +2,7 @@
   "name": "pure-modal",
   "version": "0.0.1",
   "description": "A lightweight, accessible, vanilla JavaScript modal component",
-  "main": "modal.js",
+  "main": "src/modal.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,5 +22,11 @@
   "bugs": {
     "url": "https://github.com/romamilkovic/pure-modal/issues"
   },
-  "homepage": "https://github.com/romamilkovic/pure-modal#readme"
+  "homepage": "https://github.com/romamilkovic/pure-modal#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify-es": "^1.0.1"
+  }
 }
