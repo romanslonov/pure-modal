@@ -1,4 +1,4 @@
-# Pure-modal (WIP)
+# Pure-modal
 A lightweight, accessible, vanilla JavaScript modal component. 
 
 ## Demo and documentation
