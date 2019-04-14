@@ -1,15 +1,25 @@
 {
   "name": "pure-modal",
-  "version": "0.0.1",
+  "version": "1.0.3",
   "description": "A lightweight, accessible, vanilla JavaScript modal component",
-  "main": "src/modal.js",
+  "main": "dist/pure-modal.common.js",
+  "module": "dist/pure-modal.esm.js",
+  "unpkg": "dist/pure-modal.min.js",
+  "style": "dist/pure-modal.min.css",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run build:js && npm run build:css",
+    "build:js": "rollup --config rollup.config.js",
+    "build:css": "postcss lib/modal.css -o dist/pure-modal.min.css --use autoprefixer cssnano --no-map",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/romamilkovic/pure-modal.git"
   },
+  "files": [
+    "dist/*",
+    "lib/*"
+  ],
   "keywords": [
     "modal",
     "dialog",
@@ -24,9 +34,23 @@
   },
   "homepage": "https://github.com/romamilkovic/pure-modal#readme",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-csso": "^3.0.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-uglify-es": "^1.0.1"
-  }
+    "autoprefixer": "^9.5.1",
+    "cssnano": "^4.1.10",
+    "parcel-bundler": "^1.12.3",
+    "postcss": "^7.0.14",
+    "postcss-cli": "^6.1.2",
+    "rollup": "^1.10.0",
+    "rollup-plugin-banner": "^0.2.0",
+    "rollup-plugin-buble": "^0.19.6",
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-terser": "^4.0.4"
+  },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions",
+    "last 2 Edge versions",
+    "last 2 ChromeAndroid versions",
+    "last 2 iOS versions"
+  ]
 }
