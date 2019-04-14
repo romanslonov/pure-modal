@@ -1,6 +1,4 @@
-<p align="center">
-  <img width="100" height="100" src="https://i.imgur.com/mfvfVlh.png" />
-</p>
+<img width="100" height="100" src="https://i.imgur.com/mfvfVlh.png" />
 
 # Pure-modal
 A lightweight, accessible, vanilla JavaScript modal component. 
