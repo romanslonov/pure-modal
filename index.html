@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pure Modal – A lightweight, accessible, vanilla JavaScript modal component.</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://unpkg.com/pure-modal@latest/dist/pure-modal.min.css">
+</head>
+<body class="page">
+
+    <header class="hero container">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="78" height="78" viewBox="0 0 78 78">
+            <defs>
+                <linearGradient id="pure_modal_icon-a" x1="50%" x2="50%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#008EFF"/>
+                <stop offset="100%" stop-color="#05F"/>
+                </linearGradient>
+                <rect id="pure_modal_icon-b" width="38" height="23" x="12.5" y=".5" rx="3"/>
+                <rect id="pure_modal_icon-c" width="38" height="23" x="6.5" y="6.5" rx="3"/>
+                <rect id="pure_modal_icon-d" width="38" height="23" x=".5" y="12.5" rx="3"/>
+            </defs>
+            <g fill="none" fill-rule="evenodd" transform="translate(.5 .5)">
+                <rect width="77" height="77" fill="url(#pure_modal_icon-a)" rx="17.5"/>
+                <g transform="translate(13 20)">
+                <use fill="#9CBDFF" xlink:href="#pure_modal_icon-b"/>
+                <rect width="37" height="22" x="13" y="1" stroke="#FFF" rx="3"/>
+                <use fill="#6598FF" xlink:href="#pure_modal_icon-c"/>
+                <rect width="37" height="22" x="7" y="7" stroke="#FFF" rx="3"/>
+                <use fill="#236CFF" xlink:href="#pure_modal_icon-d"/>
+                <rect width="37" height="22" x="1" y="13" stroke="#FFF" rx="3"/>
+                <rect width="1.998" height="2" x="32.5" y="16.5" fill="#FFF" rx=".999"/>
+                <rect width="1.998" height="2" x="38.5" y="10.5" fill="#FFF" rx=".999"/>
+                <rect width="1.998" height="2" x="44.5" y="4.5" fill="#FFF" rx=".999"/>
+                </g>
+            </g>
+        </svg>
+
+        <h1 class="hero__title">PureModal.js</h1>
+        <p class="hero__description">A lightweight, accessible, vanilla JavaScript modal component.</p>
+    </header>
+
+    <main class="content container">
+        <div class="container">
+            <h2 class="mt-0 mb-l ta-center fw-4">Examples</h2>
+            <div class="flex justify-center items-center">
+                <div class="mr-s">
+                    <button class="btn btn--l btn--primary" data-toggle="modal" data-target="modal1">Basic modal</button>
+                </div>
+                <div class="mr-s">
+                    <button class="btn btn--l btn--primary" data-toggle="modal" data-target="modal2">Modal without transition</button>
+                </div>
+                <div class="mr-s">
+                    <a href="#" data-toggle="modal" data-target="modal1">Open modal 1 by link</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="modal1" role="dialog" aria-labelledby="modal-1" aria-describedby="basic-modal" tabindex="-1" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Modal title 1</h5>
+                        <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close">
+                            <svg width="16" height="16" viewBox="0 0 40 40">
+                                <path stroke-linecap="round" class="close-x" d="M 10,10 L 30,30 M 30,10 L 10,30" stroke="#000" fill="transparent" stroke-width="5"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Content of modal 1
+                    </div>
+                    <div class="modal-footer">
+                        <div class="mr-xs">
+                            <button class="btn btn--basic" data-dismiss="modal" aria-label="Close">Close</button>
+                        </div>
+                        <button class="btn btn--primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="modal2" role="dialog" aria-labelledby="modal-2" aria-describedby="modal-has-no-transition" tabindex="-1" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Modal title 2</h5>
+                        <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close">
+                            <svg width="16" height="16" viewBox="0 0 40 40">
+                                <path stroke-linecap="round" class="close-x" d="M 10,10 L 30,30 M 30,10 L 10,30" stroke="#000" fill="transparent" stroke-width="5"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Content of modal 2
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer container">
+        <div class="footer__content">
+            Designed and developed by <a href="https://github.com/romanslonov" class="link link--primary">Roman Slonov.</a>
+        </div>
+    </footer>
+
+
+<script src="https://unpkg.com/pure-modal@latest"></script>
+<script>
+// Modal1
+const modal1 = new PureModal('modal1');
+
+// Modal2
+const modal2 = new PureModal('modal2', { transition: false });
+
+modal1.init();
+modal2.init();
+
+</script>
+</body>
+</html>
